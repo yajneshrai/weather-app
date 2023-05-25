@@ -1,0 +1,21 @@
+<section class="d-f-center" *ngIf="profile" [ngClass]="{'active': profile.active}">
+    <div class="d-f-column width-100">
+        <div class="prof-name">Profile name: <span class="grey">{{profile.name}}</span> </div>
+        <div class="d-f-jc-space-around d-f-ai-center actions">
+            <button class="make-active" (click)="makeActive(profile.id)">{{ profile.active ? 'Active' : 'Make active' }}</button>
+            <button [ngClass]="{'remove-prof': !profile.active, 'disabled': profile.active}"
+                (click)="removeProfile(profile.id)" [disabled]="profile.active">Remove</button>
+        </div>
+        <hr>
+        <div class="city-list" *ngIf="profile.cities.length">
+            <div>City List</div>
+            <ul>
+                <li *ngFor="let city of profile.cities" (click)="openCity(city)">
+                    {{city.name}}, {{city.sys.country}}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+

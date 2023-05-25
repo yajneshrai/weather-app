@@ -1,0 +1,18 @@
+<section>
+    <form (ngSubmit)="addProfile()" #profileForm="ngForm" class="d-f-column d-f-center">
+        <label for="add-profile">Profile name</label>
+        <div class="form-group d-flex">
+            <input id="add-profile" placeholder="Profile name" [(ngModel)]="profileName" [ngModelOptions]="{standalone: true}" />
+            <button type="submit" class="add-profile" >
+                Add Profile
+            </button>
+        </div>
+        
+    </form>
+
+    <div class="profile-list d-f-center d-f-column">
+        <ng-container *ngFor="let profile of profiles">
+            <app-profile [profile]="profile"></app-profile>
+        </ng-container>
+    </div>
+</section>

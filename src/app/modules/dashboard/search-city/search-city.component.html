@@ -1,0 +1,23 @@
+<div class="city-search-wrapper d-f-column d-f-center">
+    <label for="city-search-input">Search for a city</label>
+    <div class="d-flex">
+        <input type="text" id="city-search-input" #city />
+        <button class="search-button" (click)="onCitySearch(city.value)">Search</button>
+    </div>
+    
+    <div *ngIf="showList && this.cities.length" class="city-suggestions">
+        <div *ngFor="let city of cities"
+            class="city-suggestion d-f-ai-center d-f-jc-space-between"
+            (click)="selectCity(city)">
+            <div>{{city.name}}, {{city.sys.country}}</div>
+            <div>{{city.main.temp | kelvinToCelcius }} <sup>o</sup>C</div>
+            <div>{{city.weather[0].description | titlecase }}</div>
+            <div>{{city.coord.lat.toFixed(2)}}, {{city.coord.lon.toFixed(2)}}</div>
+        </div>
+    </div>
+    <div *ngIf="searchDone && !this.cities.length && !this.showList">
+        <div class="no-city d-center">
+            <div>Could not find any matching cities!</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+:host {
+    $bg-color: #424242;
+    $text-color: #F5F5F5;
+    $active-color: #616161;
+
+    .header {
+        height: 4.5rem;
+        background-color: $bg-color;
+        padding: 0 1rem;
+    }
+
+    .logo {
+        width: 25%;
+        color: $text-color;
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    nav {
+        width: 50%;
+        color: $text-color;
+
+        ul li {
+            padding: 0.75rem 1rem;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+    }
+
+    .active {
+        background-color: $active-color;
+        border-radius: 1rem;
+        font-weight: 600;
+    }
+}

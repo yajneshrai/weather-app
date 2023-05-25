@@ -1,0 +1,60 @@
+:host {
+    section {
+        border: 1px solid grey;
+        width: 20rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .grey {
+        color: #757575;
+    }
+
+    .prof-name {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .actions button {
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .make-active {
+        background: #DCEDC8;
+        border: 1px solid green;
+    }
+
+    .remove-prof {
+        background: #FFCDD2;
+        border: 1px solid red;
+    }
+
+    .active {
+        background-color: #F1F8E9;
+        border: 2px solid green;
+    }
+
+    .disabled {
+        background-color: #E0E0E0;
+        border: 1px solid;
+        cursor: not-allowed !important;
+    }
+
+    .city-list {
+        margin-top: 1rem;
+        border-top: 1px solid grey;
+        padding-top: 1rem;
+    
+        ul {
+            list-style: disc;
+
+            li:hover {
+                cursor: pointer;
+                font-weight: 500;
+                width: max-content;
+                border-bottom: 1px solid grey;
+            }
+        }
+    }
+}

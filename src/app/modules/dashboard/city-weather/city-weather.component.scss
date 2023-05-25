@@ -1,0 +1,104 @@
+:host {
+    section {
+        border: 1px solid grey;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        width: 50rem;
+
+        .city-name {
+            font-size: 2rem;
+        }
+
+
+        button.add-to-list {
+            border: 1px solid;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #BDBDBD;
+            }
+        }
+
+        .grey {
+            color: #757575;
+        }
+
+        .temp {
+            font-size: 1.5rem;
+        }
+
+        .mar-top-0_5 {
+            margin-top: 0.5rem;
+        }
+
+        .mar-top-1 {
+            margin-top: 1rem;
+        }
+
+        .mar-bot-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mar-left-5 {
+            margin-left: 5rem;
+        }
+
+        @mixin color-grp {
+            border-left: 4px solid;
+            padding-left: 1rem;
+        }
+
+        .red-group {
+            @include color-grp();
+            border-image: linear-gradient(to bottom, #FF5722, #FFC107) 1 100%;
+        }
+
+        .green-group {
+            @include color-grp();
+            border-image: linear-gradient(to bottom, #009688, #CDDC39) 1 100%;
+        }
+
+        .blue-group {
+            @include color-grp();
+            border-image: linear-gradient(to bottom, #3F51B5, #00BCD4) 1 100%;
+        }
+
+        .forecast {
+            margin-top: 1rem;
+            border-top: 1px solid grey;
+
+            div {
+                margin: 1rem 0;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                td, th {
+                    border: 1px solid grey;
+                    padding: 0.5rem;
+                }
+                
+            }
+        }
+    }
+
+    .notification {
+        background: #424242;
+        color: white;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 1rem;
+        width: 25rem;
+        text-align: center;
+    }
+}
